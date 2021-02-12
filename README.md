@@ -21,5 +21,31 @@ Here, only the newly added function scripts for the new matrices have been discu
 3). `gravity_loading_matrix.m` is a function which calculates the gravity loading matrix, whose each term corresponds to the potential energy considerations of each link due to gravity. In the case of moving base, it depends on the base position coordinates.
 
 
-##Validating Dynamic Model
+## Validating Dynamic Model
 For validation, the simple example of a 1-D cart pole system is considered. This system is extremely simple, with the cart being a moving base and the pole can be considered as a single link manipulator. The pole is connected to the cart with the help of a revolute joint. 
+
+The anaytical solution of the cart pole system has been derived using tradiational Euler-Lagrange method after which the hard code is developed for the analytical expression, from which the anaytical solution for pole joint torque is computed. The analytical hard code was compiled in a MATLAB Live Script, which can be accessed from this repository, but for illustration purposes, the snippets of the live script have been shared here:
+
+![LiveScriptSnippet](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/Live_Script_Snippet1.PNG)
+
+
+![LiveScriptSnippet](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/Live_Script_Snippet2.PNG)
+
+
+![LiveScriptSnippet](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/Live_Script_Snippet3.PNG)
+
+
+![LiveScriptSnippet](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/cart_trajectory.png)
+
+
+Since this cart pole system can be seen as a 1 link manipulator with a moving base, the [Moving Base Dynamic Model](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model) is modified accordingly. **Important thing to note is that for the dynamic model, the cart (base) movement isn't considered as a generalized coordinate.
+
+![LiveScriptSnippet](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/Live_Script_Snippet4.PNG)
+
+Comparing the analytical torque values and the code computed torque values:
+
+![LiveScriptSnippet](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/Pole_Joint_Torque.png)
+
+As can be seen, both the torques are more or less same across the time span. Thus, this dynamic model works.
+
+
