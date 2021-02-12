@@ -10,6 +10,7 @@ The main assumptions of this dynamic model are:
 
 The code structure is given below:
 
+![Code Structure](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/EulerLagrangeDynamicModel_MovingBase.PNG)
 
 Here, only the newly added function scripts for the new matrices have been discussed. For the other function scripts, refer to [Euler Lagrange based Dynamic Model](https://github.com/average-engineer/InvDynamics_Robotic_Manipulator_Euler-Lagrange_Formulation) in my profile.
 
@@ -44,7 +45,7 @@ Since this cart pole system can be seen as a 1 link manipulator with a moving ba
 
 Comparing the analytical torque values and the code computed torque values:
 
-![LiveScriptSnippet](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/Pole_Joint_Torque.png)
+![Result](https://github.com/average-engineer/Moving_Base_Robotic_Manipulator_Dynamic_Model/blob/main/Pole_Joint_Torque.png)
 
 As can be seen, both the torques are more or less same across the time span. Thus, this dynamic model works.
 
