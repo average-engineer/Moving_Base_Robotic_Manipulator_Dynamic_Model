@@ -2,7 +2,7 @@ function [joint_torque] = Inv_Dynamics_LE_CartPole
 
 %%
 %**************************************************************************
-%******************** INVERSE DYNAMICS of SINGLE LEG **********************
+%******************** INVERSE DYNAMICS of CART POLE SYSTEM ****************
 %**************************************************************************
 % WHERE
 % NJ = Number of Joints
@@ -168,5 +168,4 @@ for ii = 1:length(sim_time)
     joint_torque(ii) = joint_torques{ii};
 end
 
-aa = 1;
 end
