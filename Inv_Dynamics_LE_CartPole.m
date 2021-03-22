@@ -165,7 +165,7 @@ aa = 1;
 %generalized torque matrix at each time instant
 for ii = 1:length(sim_time)
     joint_torques{ii} = D{ii}*theta_dot_dot{ii} + h{ii} + c{ii} + p_v{ii}*theta_dot{ii} + p_f{ii};
-    joint_torque(ii) = joint_torques{ii};
+    joint_torque(ii) = -joint_torques{ii};
 end
 
 end
